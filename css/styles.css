@@ -1,0 +1,43 @@
+/* font 적용 */
+body {
+    font-family:'Trebuchet MS',
+     'Lucida Sans Unicode', 
+     'Lucida Grande', 
+     'Lucida Sans', 
+     Arial, 
+     sans-serif;
+}
+
+.status-bar {
+    display: flex;                  /*여러줄에서 한줄로 구성할때 사용하는 속성 */
+   /* justify-content: space-between; 같은줄에 있는 항목을 서로 간격을 두고 떨어뜨릴때 */
+   justify-content: center;
+} 
+
+/*   
+.status-bar에서
+justify-content:center로 하는 순간 div는 3개므로 33%씩 가지고 있음
+*/
+.status-bar__column {
+    width: 33%; 
+}
+
+/*No Service와 와이파이 아이콘 사이에 간격을 띄울때*/
+.status-bar__column:first-child span {
+    margin-right: 5px;
+}
+
+.status-bar__column:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+
+.status-bar__column:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /*아이콘 수직으로 맞지 않은 현상 정렬*/
+}
+
+.status-bar__column .fa-battery-full {
+    margin: 0px 5px;
+}
